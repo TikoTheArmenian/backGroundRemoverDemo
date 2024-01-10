@@ -1,13 +1,50 @@
 <!doctype html>
 <html>
 <head>
-    <title>Upload Image</title>
+   <title>Upload Coin Images</title>
+   <style>
+       .input-field {
+           padding: 10px;
+           margin: 10px 0;
+           background-color: #f8f8f8;
+           border-radius: 5px;
+       }
+       .file-input {
+           display: none;
+       }
+       .file-input-label {
+           padding: 10px 20px;
+           background-color: #4caf50;
+           color: white;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       .submit-btn {
+           padding: 10px 20px;
+           background-color: #008CBA;
+           color: white;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+   </style>
 </head>
 <body>
-    <h1>Upload an image to remove its background</h1>
-    <form action="/" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-    </form>
+   <h1>Upload Front and Back Images of a Coin</h1>
+   <form action="/" method="post" enctype="multipart/form-data">
+       <div class="input-field">
+           <label for="front">Front Image of Coin:</label><br>
+           <label class="file-input-label" for="frontFile">Choose File</label>
+           <input class="file-input" type="file" name="front" id="frontFile" required>
+       </div>
+       
+       <div class="input-field">
+           <label for="back">Back Image of Coin:</label><br>
+           <label class="file-input-label" for="backFile">Choose File</label>
+           <input class="file-input" type="file" name="back" id="backFile" required>
+       </div>
+
+       <input class="submit-btn" type="submit" value="Upload">
+   </form>
 </body>
 </html>

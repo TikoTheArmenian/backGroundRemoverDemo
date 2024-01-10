@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>Download Processed Image</title>
+    <title>Download Processed Images</title>
 </head>
 <body>
-    <h1>Your image is ready!</h1>
-    <p><a href="{{ url_for('uploaded_file', filename=filename) }}">Click here to download</a></p>
+    <h1>Your Images are Ready!</h1>
+    <p><a href="{{ url_for('uploaded_file', filename=front) }}">Download Front Image</a></p>
+    <p><a href="{{ url_for('uploaded_file', filename=back) }}">Download Back Image</a></p>
+    <p><a href="{{ url_for('uploaded_file', filename=combined) }}">Download Combined Image</a></p>
 </body>
 </html>
